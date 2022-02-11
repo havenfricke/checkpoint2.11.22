@@ -46,7 +46,7 @@
   <header class="container-fluid">
 
     <div class="row bg-dark">
-      <h1 class="col-12 text-center mt-2 p-3">WATER YOUR PLANTS</h1>
+      <h1 class="col-12 text-center mt-2 p-1">MONEYFRUIT</h1>
     </div>
 
   </header>
@@ -56,58 +56,38 @@
   <main class="container-fluid">
 
     <div class="row">
-
-      <div id="tree-row" class="col-12 bg-grass d-flex text-center justify-content-between p-5">
-
-
-        <!--START OF TEMPLPATE-->
-        <span class="col-2 selectable">
-
-          <h1>🌳</h1>
-
-          <div id="plant-row" class="progress" style="height: 5px rounded;">
-            <div>
-              <div onclick="giveWater()" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-
-            <div>
-              <div onclick="giveFertilizer()" class="progress-bar" role="progressbar" style="width: 25%;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-
-            <div>
-              <div onclick="giveLove()" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-          <!-- </span><span class="col-2 selectable">
-          <h1>🌳</h1>
-          <div onclick="giveWater()" class="progress" style="height: 5px rounded;">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-              aria-valuemax="100"></div>
-          </div>
-        </span><span class="col-2 selectable">
-          <h1>🌳</h1>
-          <div onclick="giveWater()" class="progress" style="height: 5px rounded;">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-              aria-valuemax="100"></div>
-          </div>
-        </span><span class="col-2 selectable">
-          <h1>🌳</h1>
-          <div onclick="giveWater()" class="progress" style="height: 5px rounded;">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-              aria-valuemax="100"></div>
-          </div>
-        </span> -->
-          <!--END OF TEMPLATE-->
-
-
+      <div id="plant-row" class="bg-grass d-flex justify-content-center p-5">
+        <h1 class="selectable tree col-4 text-center" onclick="getFruit()">🌳</h1>
       </div>
     </div>
+
+    <div id="fruit-count" class="row bg-dark">
+      <!--TEMPLATE START-->
+      <span class="col-12 text-center p-1 m-1">
+        <h2>MY FRUIT: 5</h2>
+      </span>
+      <!--TEMPLATE END-->
+    </div>
+
+    <div class="row bg-secondary border border-dark p-1">
+
+      <span class="col-12 text-start border-bottom border-dark" 2>UPGRADES</span>
+      <span class="col-12 text-start p-1" 2>Green Thumb Multiplier: x2</span>
+      <span class="col-12 text-start p-1" 2>Workers: #</span>
+      <span class="col-12 text-start p-1" 2>Fertilizer Strength: #</span>
+      <span class="col-12 text-start p-1" 2>Tools: #</span>
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
 
   </main>
 
