@@ -36,7 +36,7 @@
 
 
 
-<body class="debug">
+<body class="">
 
 
 
@@ -63,19 +63,21 @@
 
     <div id="fruit-count" class="row bg-dark">
       <!--TEMPLATE START-->
-      <span class="col-12 text-center p-1 m-1">
+      <!-- <span class="col-12 text-center p-1">
         <h2>MY FRUIT: 5</h2>
-      </span>
+      </span> -->
       <!--TEMPLATE END-->
     </div>
 
     <div class="row bg-secondary border border-dark p-1">
 
+
+
       <span class="col-12 text-center border-bottom border-dark">
         <h3>UPGRADES</h3>
       </span>
 
-      <span class="col-12 text-start p-1" 2>Green Thumb Multiplier: x2</span>
+      <span class="col-12 text-start p-1" 2>Knowlegde: #</span>
       <!--Clicking upgrade-->
 
       <span class="col-12 text-start p-1" 2>Fertilizer Strength: #</span>
@@ -87,6 +89,12 @@
       <span class="col-12 text-start p-1" 2>Tools: #</span>
       <!--automatic upgrade-->
 
+      <div>
+        <span class="col-12 text-start p-1" 2>Green Thumb Multiplier: #</span>
+        <!--total upgrades-->
+      </div>
+
+
 
     </div>
 
@@ -97,10 +105,10 @@
 
       <div class="row p-5">
 
-        <button type="button" class="col-6 btn-success">BUY BOTANY BOOK</button>
-        <button type="button" class="col-6 btn-warning">BUY FERTILIZER</button>
-        <button type="button" class="col-6 btn-primary">BUY WORKER</button>
-        <button type="button" class="col-6 btn-danger">BUY TOOLS</button>
+        <button onclick="buyBook()" type="button" class="col-6 btn-success">10 FRUITS: BUY BOTANY BOOK</button>
+        <button onclick="buyFertilizer()" type="button" class="col-6 btn-warning">10 FRUITS:BUY FERTILIZER</button>
+        <button onclick="buyWorker()" type="button" class="col-6 btn-primary">10 FRUITS: BUY WORKER</button>
+        <button onclick="buyTools()" type="button" class="col-6 btn-danger">10 FRUITS: BUY TOOLS</button>
 
       </div>
 
