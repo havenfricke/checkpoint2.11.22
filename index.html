@@ -46,7 +46,8 @@
   <header class="container-fluid">
 
     <div class="row bg-dark">
-      <h1 class="col-12 text-center mt-2 p-1">MONEYFRUIT</h1>
+      <h1 class="col-12 brighten text-center brighter text-light mt-1 p-1">MONEYFRUIT</h1>
+      <h4 class="col-12 text-center mt-1 p-1">Pick fruit from the tree!!!</h4>
     </div>
 
   </header>
@@ -56,7 +57,7 @@
   <main class="container-fluid">
 
     <div class="row">
-      <div id="plant-row" class="bg-grass d-flex justify-content-center p-5">
+      <div id="plant-row" class="bg-grass d-flex justify-content-center p-2">
         <h1 class="selectable tree col-4 text-center" onclick="getFruit()">🌳</h1>
       </div>
     </div>
@@ -73,27 +74,27 @@
 
 
 
-      <span class="col-12 text-center border-bottom border-dark">
-        <h3>UPGRADES</h3>
+      <!-- <span class="col-12 border-bottom border-dark">
+        <h3 class="text-light">UPGRADES</h3>
       </span>
 
 
       <span class="col-12 text-start p-1" 2>Botany Knowlegde: #</span>
-      <!--Clicking upgrade-->
+
 
       <span class="col-12 text-start p-1" 2>Fertilizer Strength: #</span>
-      <!--automatic upgrade-->
+  
 
       <span class="col-12 text-start p-1" 2>Workers: #</span>
-      <!--automatic upgrade-->
+
 
       <span class="col-12 text-start p-1" 2>Tools: #</span>
-      <!--automatic upgrade-->
+
 
       <div>
         <span class="col-12 text-start p-1" 2>Green Thumb Multiplier: x#</span>
-        <!--total upgrades-->
-      </div>
+  
+      </div> -->
 
 
 
@@ -104,15 +105,21 @@
         <h2>UPGRADES STORE</h2>
       </span>
 
-      <div class="row p-5">
+      <div class="row d-flex justify-content-center p-2">
 
-        <button id="buy-book" onclick="buyBook()" type="button" class="col-6 btn-success">10 FRUITS: BUY BOTANY
+        <button id="buy-book" onclick="buyBook()" type="button" class="col-2 rounded-pill p-3 btn-success">25 FRUITS:
+          BOTANY
           BOOK</button>
-        <button id="buy-fertilizer" onclick="buyFertilizer()" type="button" class="col-6 btn-warning">10 FRUITS:BUY
-          FERTILIZER</button>
-        <button id="buy-worker" onclick="buyWorker()" type="button" class="col-6 btn-primary">10 FRUITS: BUY
+        <button id="buy-fertilizer" onclick="buyFertilizer()" type="button"
+          class="col-2 p-3 rounded-pill btn-warning">100
+          FRUITS: FERTILIZER</button>
+        <button id="buy-worker" onclick="buyWorker()" type="button" class="col-2 p-3 rounded-pill btn-primary">250
+          FRUITS:
+          BUY
           WORKER</button>
-        <button id="buy-tools" onclick="buyTools()" type="button" class="col-6 btn-danger">10 FRUITS: BUY TOOLS</button>
+        <button id="buy-tools" onclick="buyTools()" type="button" class="col-2 p-3 rounded-pill btn-danger">500 FRUITS:
+          BUY
+          TOOLS</button>
 
       </div>
 

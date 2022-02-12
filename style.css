@@ -13,6 +13,7 @@ height: 20vh;
 width: auto;
 }
 
+
 .tree{
   font-size: 150pt;
   user-select: none;
@@ -32,5 +33,10 @@ width: auto;
   filter: drop-shadow(0px 0px 10px rgb(255, 246, 126))
 }
 
+.brighter, h2, h3, h5, h6, button:hover{
+  transform: scale(1.01);
+  transition: all .2s ease-in-out;
+  filter: drop-shadow(0px 0px 10px rgb(255, 246, 126))
+}
 
   
