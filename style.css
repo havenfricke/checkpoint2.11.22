@@ -8,10 +8,10 @@ height: 100vh;
 width: auto;
 } */
 
-/* footer{
-height: 100vh;
+footer{
+height: 20vh;
 width: auto;
-} */
+}
 
 .tree{
   font-size: 150pt;
@@ -19,7 +19,7 @@ width: auto;
 }
 
 .bg-grass{
-  background-image:darkolivegreen;
+  background-color:darkolivegreen;
 }
 
 .selectable{
