@@ -91,7 +91,7 @@ function drawShopPrice() {
   for (let key in myDict) {
     let inflation = myDict[key]
     template += `
-    <span class="col-12 text-center text-light p-3">
+    <span class="col-12 text-center text-light p-1">
     <h2>UPGRADES STORE</h2>
     </span>
 
