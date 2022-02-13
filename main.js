@@ -17,8 +17,8 @@ let myDict = {
   }
 }
 
-//Botany knowledge * Fertilizer Strength = green thumb multiplier
-//Tools * workers = worker efficiency multiplier
+//Botany knowledge + Fertilizer Strength = green thumb multiplier
+//Tools * workers or Alchemist = worker efficiency multiplier
 
 function getFruit() {
   myDict.myThings.fruit += (1 * myDict.myThings.greenThumbMultiplier)
@@ -77,7 +77,7 @@ function drawUpgrades() {
 
 
 
-  <span class="col-12 text-start text-light p-1">Worker Efficiency Multiplier: x ${upgradesBought.workerEfficiency}</span>
+  <span class="col-12 text-start text-light p-1">Labor Efficiency Multiplier: x ${upgradesBought.workerEfficiency}</span>
   <!--total upgrades-->
 `
   }
@@ -90,28 +90,30 @@ function drawShopPrice() {
   let template = ''
   for (let key in myDict) {
     let inflation = myDict[key]
-    template += `<span class="col-12 text-center text-light p-3">
+    template += `
+    <span class="col-12 text-center text-light p-3">
     <h2>UPGRADES STORE</h2>
-  </span>
+    </span>
+
+    <div class="row d-flex brighter text-center text-light border-bottom justify-content-center">
+    <span class="col-2">+ 1 Green Thumb</span><span class="col-2">+ 3 Green Thumb</span><span class="col-2">+ 1
+      Fruit / 10 seconds</span><span class="col-2">x3 Efficiency / Laborer</span><span class="col-2">+ 1 Fruit / 1
+      Second</span>
+  </div>
 
   <div class="row d-flex justify-content-center p-2">
 
-    <button id="buy-book" onclick="buyBook()" type="button" class="col-2 rounded-pill p-3 btn-success">${(inflation.bookMultiplier * 25)} FRUITS:
-      BOTANY
-      BOOK</button>
-    <button id="buy-fertilizer" onclick="buyFertilizer()" type="button"
-      class="col-2 p-3 rounded-pill btn-warning">${(inflation.fertilizerMultiplier * 100)}
-      FRUITS: FERTILIZER</button>
-    <button id="buy-worker" onclick="buyWorker()" type="button" class="col-2 p-3 rounded-pill btn-primary">${inflation.workerMultiplier * 250}
-      FRUITS:
-      
-      WORKER</button>
-    <button id="buy-tools" onclick="buyTools()" type="button" class="col-2 p-3 rounded-pill btn-danger">${(inflation.toolMultiplier * 500)} FRUITS:
-      
-      TOOLS</button>
-    <button id="buy-RnD" onclick="buyRnD()" type="button" class="col-2 p-3 rounded-pill btn-info">${(inflation.RnDMultiplier * 10000)} FRUITS:
-      ALCHEMIST</button>
-  </div>`
+    <button id="buy-book" onclick="buyBook()" type="button" class="col-2 rounded-pill p-3 btn-success">${(inflation.bookMultiplier * 25)} FRUITS: BOTANY BOOK</button>
+
+    <button id="buy-fertilizer" onclick="buyFertilizer()" type="button" class="col-2 p-3 rounded-pill btn-warning">${(inflation.fertilizerMultiplier * 100)} FRUITS: FERTILIZER</button>
+
+    <button id="buy-worker" onclick="buyWorker()" type="button" class="col-2 p-3 rounded-pill btn-primary">${inflation.workerMultiplier * 250} FRUITS: WORKER</button>
+
+    <button id="buy-tools" onclick="buyTools()" type="button" class="col-2 p-3 rounded-pill btn-danger">${(inflation.toolMultiplier * 500)} FRUITS: TOOLS</button>
+
+    <button id="buy-RnD" onclick="buyRnD()" type="button" class="col-2 p-3 rounded-pill btn-info">${(inflation.RnDMultiplier * 10000)} FRUITS: ALCHEMIST</button>
+
+    </div>`
   }
   document.getElementById('shop').innerHTML = template
   drawFruit()
@@ -170,7 +172,7 @@ function workerJob() {
 function setBuyWorker() {
   if (myDict.myThings.fruitWorker < 0.5) { return }
   if (myDict.myThings.fruitWorker >= 1)
-    setInterval(workerJob, 5000)
+    setInterval(workerJob, 10000)
   drawFruit()
 }
 
@@ -192,9 +194,10 @@ function buyRnD() {
   if (myDict.myThings.fruit < (10000 * myDict.myThings.RnDMultiplier)) { return }
   if (myDict.myThings.fruit >= (10000 * myDict.myThings.RnDMultiplier))
     myDict.myThings.fruit -= (10000 * myDict.myThings.RnDMultiplier)
-  myDict.myThings.fruitAlchemistHiddenNumber += 5
-  myDict.myThings.workerEfficiency += (5 * myDict.myThings.fruitTools)
+  myDict.myThings.fruitAlchemistHiddenNumber += 1
+  myDict.myThings.workerEfficiency += (1 * myDict.myThings.fruitTools)
   myDict.myThings.fruitAlchemist += 1
+  myDict.myThings.RnDMultiplier += 1
   drawFruit()
   drawUpgrades()
   drawShopPrice()
@@ -210,7 +213,7 @@ function alchemistJob() {
 function setBuyAlechemist() {
   if (myDict.myThings.fruitAlchemist < 0.5) { return }
   if (myDict.myThings.fruitAlchemist >= 1)
-    setInterval(alchemistJob, 5000)
+    setInterval(alchemistJob, 1000)
   drawFruit()
 }
 
