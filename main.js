@@ -12,7 +12,8 @@ let myDict = {
     fertilizerMultiplier: 1,
     workerMultiplier: 1,
     toolMultiplier: 1,
-    RnDMultiplier: 1
+    RnDMultiplier: 1,
+    fruitAlchemistHiddenNumber: 0
   }
 }
 
@@ -161,7 +162,7 @@ function buyWorker() {
 }
 
 function workerJob() {
-  myDict.myThings.fruit += (1 * myDict.myThings.workerEfficiency)
+  myDict.myThings.fruit += (1 * myDict.myThings.fruitTools)
   console.log(myDict.myThings.fruit)
   drawFruit()
 }
@@ -179,7 +180,7 @@ function buyTools() {
   if (myDict.myThings.fruit >= (500 * myDict.myThings.toolMultiplier))
     myDict.myThings.fruit -= (500 * myDict.myThings.toolMultiplier)
   myDict.myThings.workerEfficiency += (3 * myDict.myThings.fruitWorker)
-  myDict.myThings.workerEfficiency += (5 * myDict.myThings.fruitAlchemist)
+  myDict.myThings.workerEfficiency += (3 * myDict.myThings.fruitAlchemistHiddenNumber)
   myDict.myThings.fruitTools += 3
   myDict.myThings.toolMultiplier += 1
   drawFruit()
@@ -191,6 +192,7 @@ function buyRnD() {
   if (myDict.myThings.fruit < (10000 * myDict.myThings.RnDMultiplier)) { return }
   if (myDict.myThings.fruit >= (10000 * myDict.myThings.RnDMultiplier))
     myDict.myThings.fruit -= (10000 * myDict.myThings.RnDMultiplier)
+  myDict.myThings.fruitAlchemistHiddenNumber += 5
   myDict.myThings.workerEfficiency += (5 * myDict.myThings.fruitTools)
   myDict.myThings.fruitAlchemist += 1
   drawFruit()
@@ -200,7 +202,7 @@ function buyRnD() {
 }
 
 function alchemistJob() {
-  myDict.myThings.fruit += (5 * myDict.myThings.workerEfficiency)
+  myDict.myThings.fruit += (5 * myDict.myThings.fruitTools)
   console.log(myDict.myThings.fruit)
   drawFruit()
 }
