@@ -9,7 +9,7 @@ width: auto;
 } */
 
 footer{
-height: 20vh;
+height: 10vh;
 
 }
 
@@ -20,7 +20,12 @@ height: 20vh;
 }
 
 .bg-grass{
-  background-color:darkolivegreen;
+  background-image:url('https://i2.wp.com/files.123freevectors.com/wp-content/original/111314-green-and-black-blurred-background-vector.jpg?w=800&q=95');
+  background-size: cover;
+}
+
+.bg-green{
+  background-color: darkolivegreen;
 }
 
 .selectable{

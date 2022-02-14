@@ -48,7 +48,7 @@ function drawUpgrades() {
     let upgradesBought = myDict[key]
     template += `
     <div class="row d-flex justify-content-start">
-    <span class="col-6 text-start text-light border-bottom border-dark">
+    <span class="col-3 text-start text-light border-bottom border-dark">
     <h3>UPGRADES</h3>
     </span>
     </div>
