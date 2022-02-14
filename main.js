@@ -128,7 +128,10 @@ drawShopPrice()
 
 
 function buyBook() {
-  if (myDict.myThings.fruit < (25 * myDict.myThings.bookMultiplier)) { return }
+  if (myDict.myThings.fruit < (25 * myDict.myThings.bookMultiplier)) {
+    // alert  
+    return
+  }
   if (myDict.myThings.fruit >= (25 * myDict.myThings.bookMultiplier))
     myDict.myThings.fruit -= (25 * myDict.myThings.bookMultiplier)
   myDict.myThings.greenThumbMultiplier += 1
