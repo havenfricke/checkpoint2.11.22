@@ -17,6 +17,8 @@ let myDict = {
   }
 }
 
+
+
 //Botany knowledge + Fertilizer Strength = green thumb multiplier
 //Tools * workers or Alchemist = worker efficiency multiplier
 
@@ -45,9 +47,11 @@ function drawUpgrades() {
   for (let key in myDict) {
     let upgradesBought = myDict[key]
     template += `
-    <span class="col-12 text-start text-light border-bottom border-dark">
+    <div class="row d-flex justify-content-start">
+    <span class="col-6 text-start text-light border-bottom border-dark">
     <h3>UPGRADES</h3>
-  </span>
+    </span>
+    </div>
 
 
   <span class="col-12 text-start text-light p-1">Botany Knowlegde: ${upgradesBought.fruitKnowledge + 1}</span>
@@ -205,7 +209,7 @@ function buyRnD() {
 }
 
 function alchemistJob() {
-  myDict.myThings.fruit += (5 * myDict.myThings.fruitTools)
+  myDict.myThings.fruit += (1 * myDict.myThings.fruitTools)
   console.log(myDict.myThings.fruit)
   drawFruit()
 }

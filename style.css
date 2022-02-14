@@ -1,5 +1,5 @@
 /* header{
-height: 100vh;
+height: 10vh;
 width: auto;
 } */
 
@@ -10,7 +10,7 @@ width: auto;
 
 footer{
 height: 20vh;
-width: auto;
+
 }
 
 
@@ -39,24 +39,4 @@ width: auto;
   filter: drop-shadow(0px 0px 10px rgb(255, 246, 126))
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; 
-}
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
